@@ -24,15 +24,15 @@ public class PatternRunner {
 
         // CALL METHOD FOR SAMPLE PROBLEM: drawSample() sample pattern (two meager beady eyes)
         // Two arguments: your ColorGrid instance, your Bridges instance
-        pat.drawSample(grid, bridges);
+        //pat.drawSample(grid, bridges);
 
         // CALL METHOD FOR PROBLEM 1: drawHorizontalStripes()  Make every other row a different color.
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
         //pat.drawHorizontalStripes(grid, bridges, new Color("red"), new Color("yellow"));
-
+        
         // CALL METHOD FOR PROBLEM 2: drawVerticalStripes() Make every other column a different color.
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
-        //pat.drawVerticalStripes(grid, bridges, new Color("blue"), new Color("red"));
+        pat.drawVerticalStripes(grid, bridges, new Color("blue"), new Color("red"));
 
         // CALL METHOD FOR PROBLEM 3: drawCheckerboard()  Create a checkerboard pattern
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
