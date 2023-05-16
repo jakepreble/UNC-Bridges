@@ -54,14 +54,58 @@ public class Pattern
 
 
 	// PROBLEM 3: method to draw checkerboard
-
+	public static void drawCheckerboard(ColorGrid grid, Bridges bridges, Color c1, Color c2) throws RateLimitException, IOException {
+		
+		for(int r = 0; r < grid.getHeight(); r++){
+			for(int c = 0; c < grid.getWidth(); c++){
+				if (r % 2 == 0 && c % 2 == 0){ 
+					grid.set(r, c, c1);
+				} else if (c % 2 == 1 && r % 2 == 1) {
+					grid.set(r,c,c1);
+				}
+				
+			}
+		}
+		bridges.setDataStructure(grid);
+		bridges.visualize();
+	}
 
 
 	// PROBLEM 4: method to draw border
-
+	public static void drawBorder(ColorGrid grid, Bridges bridges, Color c1, Color c2) throws RateLimitException, IOException {
+	
+		for(int r = 0; r < grid.getHeight(); r++){
+			for(int c = 0; c < grid.getWidth(); c++){
+				if (r == 0 || c == 0 || r == grid.getHeight() - 1 || c == grid.getWidth() -1) grid.set(r, c, c1);
+				else grid.set(r,c,c2);
+				
+			}
+		}
+		bridges.setDataStructure(grid);
+		bridges.visualize();
+	}
+	
 
 
 	// PROBLEM 5: method to draw X
+	public static void drawX(ColorGrid grid, Bridges bridges, Color c1, Color c2) throws RateLimitException, IOException {
+		for(int r = 0; r < grid.getHeight(); r++){
+			for(int c = 0; c < grid.getWidth(); c++){
+				if(r == c) grid.set(r, c, c1);
+				else grid.set(r,c,c2);
+				
+			}
+		}
+		for(int r = grid.getHeight() -1; r >= 0; r--){
+			for(int c = grid.getWidth()-1; c >= 0; c--){
+				if(r == c) grid.set(r, c, c1);
+				
+				
+			}
+		}
+		bridges.setDataStructure(grid);
+		bridges.visualize();
+	}
 
 
 
