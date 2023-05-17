@@ -96,9 +96,9 @@ public class Pattern
 				
 			}
 		}
-		for(int r = grid.getHeight() -1; r >= 0; r--){
-			for(int c = grid.getWidth()-1; c >= 0; c--){
-				if(r == c) grid.set(r, c, c1);
+		for(int r = grid.getHeight()-1; r >= 0; r--){
+			for(int c = 0; c < grid.getWidth(); c++){
+				if(r + c == grid.getHeight()-1) grid.set(r, c, c1);
 				
 				
 			}
@@ -110,11 +110,33 @@ public class Pattern
 
 
 	// PROBLEM 6: method to draw diagonal split
-
-
+	public static void drawDiagSplit(ColorGrid grid, Bridges bridges, Color c1, Color c2) throws RateLimitException, IOException {
+		for(int r = 0; r < grid.getHeight(); r++){
+			for(int c = 0; c < grid.getWidth(); c++){
+				if(c < r) grid.set(r, c, c1);
+				else grid.set(r,c,c2);
+			}
+		}
+		bridges.setDataStructure(grid);
+		bridges.visualize();
+	}
+		
 
 	// PROBLEM 7: method to draw 4 quadrants
-
+	public static void drawQuadrants(ColorGrid grid, Bridges bridges, Color c1, Color c2, Color c3, Color c4) throws RateLimitException, IOException {
+		for(int r = 0; r < grid.getHeight(); r++){
+			for(int c = 0; c < grid.getWidth(); c++){
+				if(r < grid.getHeight()/2 && c < grid.getWidth()/2 ) grid.set(r, c, c1);
+				if(r > grid.getHeight()/2 - 1&& c < grid.getWidth()/2) grid.set(r, c, c2);
+				if(r > grid.getHeight()/2 -1 && c > grid.getWidth()/2 -1) grid.set(r, c, c3);
+				if(r < grid.getHeight()/2 && c > grid.getWidth()/2 - 1) grid.set(r, c, c4);
+				
+				
+			}
+		}
+		bridges.setDataStructure(grid);
+		bridges.visualize();
+	}
 
 
 }  // end class

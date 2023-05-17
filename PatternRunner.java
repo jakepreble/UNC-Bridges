@@ -28,7 +28,7 @@ public class PatternRunner {
 
         // CALL METHOD FOR PROBLEM 1: drawHorizontalStripes()  Make every other row a different color.
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
-        //pat.drawHorizontalStripes(grid, bridges, new Color("red"), new Color("yellow"));
+        pat.drawHorizontalStripes(grid, bridges, new Color("red"), new Color("yellow"));
         
         // CALL METHOD FOR PROBLEM 2: drawVerticalStripes() Make every other column a different color.
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
@@ -36,7 +36,7 @@ public class PatternRunner {
 
         // CALL METHOD FOR PROBLEM 3: drawCheckerboard()  Create a checkerboard pattern
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
-       // pat.drawCheckerboard(grid, bridges, new Color("orange"), new Color("black"));
+       //pat.drawCheckerboard(grid, bridges, new Color("orange"), new Color("black"));
 
         // CALL METHOD FOR PROBLEM 4: drawBorder()  Make all the border cells one color and all the interior cells another color
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
@@ -45,7 +45,7 @@ public class PatternRunner {
         // CALL METHOD FOR PROBLEM 5: drawX()  Make an “X” design
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
         // NOTE: If your grid is not square, it is okay that your "X" is not centered
-        pat.drawX(grid, bridges, new Color("blue"), new Color("yellow"));
+        //pat.drawX(grid, bridges, new Color("blue"), new Color("yellow"));
 
         // CALL METHOD FOR PROBLEM 6: drawDiagSplit() Along the "slope = -1 diagonal", split the grid, one color each side
         // Four arguments: your ColorGrid instance, your Bridges instance, color, color)
@@ -56,7 +56,7 @@ public class PatternRunner {
         // show the x and y axes in yet another color. Otherwise, the four quadrants will show
         // and the x and y axes will merely be suggested by the color changes
         // Six arguments: your ColorGrid instance, your Bridges instance, color, color, color, color)
-        // pat.drawQuadrants(grid, bridges, new Color("blue"), new Color("yellow"), new Color("green"), new Color("red"));
+         //pat.drawQuadrants(grid, bridges, new Color("blue"), new Color("yellow"), new Color("green"), new Color("red"));
 
     } // end main method
 } // end class
